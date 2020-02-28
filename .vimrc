@@ -14,6 +14,7 @@ Plugin 'git@github.com:kien/ctrlp.vim.git' " file search
 Plugin 'git@github.com:rking/ag.vim.git' " text search
 Plugin 'morhetz/gruvbox' "color scheme
 Plugin 'git@github.com:Valloric/YouCompleteMe.git' " autocomplete
+Plugin 'belluzj/fantasque-sans' " font
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

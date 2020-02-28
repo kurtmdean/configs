@@ -1,10 +1,10 @@
 [Configuration]
-FontName=DejaVu Sans Mono 11
+FontName=Fantasque Sans Mono
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=TRUE
-MiscCursorBlinks=FALSE
+MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
