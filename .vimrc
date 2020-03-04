@@ -1,4 +1,11 @@
 set nocompatible              " be iMproved, required
+" show exiting tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+set autochdir
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -31,21 +38,22 @@ set termguicolors
 colorscheme gruvbox
 set background=dark
 
+" nerdtree
+let NERDTreeMinimalUI = 1
+
 " more auto formatting
 augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType gn AutoFormatBuffer gn
   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
   autocmd FileType java AutoFormatBuffer google-java-format
   autocmd FileType python AutoFormatBuffer yapf
-  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
-  autocmd FileType rust AutoFormatBuffer rustfmt
-  autocmd FileType vue AutoFormatBuffer prettier
+  " autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
+" You Complete Me
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+let g:ycm_max_diagnostics_to_display=0
 " DEBUG STUFFS
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
@@ -53,9 +61,10 @@ let g:ycm_warning_symbol = '.'
 let g:ycm_error_symbol = '..'
 let g:ycm_server_use_vim_stdout = 1
 " DEBUG STUFFS
-" show exiting tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
+
+" Autocompletion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
