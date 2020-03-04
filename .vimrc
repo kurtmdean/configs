@@ -31,6 +31,7 @@ Plugin 'google/vim-glaive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 call glaive#Install()
+Glaive codefmt yapf_executable="yapf3"
 filetype plugin indent on    " required
 
 set termguicolors
