@@ -46,13 +46,12 @@ augroup autoformat_settings
   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
   autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python3 AutoFormatBuffer yapf3
   autocmd FileType python AutoFormatBuffer yapf
   " autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
 " You Complete Me
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
 let g:ycm_max_diagnostics_to_display=0
 " DEBUG STUFFS
 let g:ycm_server_keep_logfiles = 1
